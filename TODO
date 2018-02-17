@@ -1,0 +1,49 @@
+# Todo
+
+````
+BTACore.
+Function: 
+To Act As A Core For My Sub Plugin.
+This Plugin Contain A Simplified API.
+````
+
+### Season 1
+- [ ] BTACore Structure
+  - [x] plugin.yml
+  - [x] src
+    - [X] Main File
+  - [x] Code Of Conduct
+  - [ ] Contributions
+  - [ ] License
+  - [x] Readme
+  - [x] Todo
+  - [x] ChangeLog
+
+### Season 2
+- [ ] src Structure
+  - [x] Main File
+  - [x] API Folder
+    - [x] Database Folder
+      - [x] DatabaseAPI
+    - [x] Currency Folder
+      - [x] CurrencyAPI
+      - [ ] Sub Shop Folder
+        - [ ] ShopAPI
+    -[ ] RPG Folder
+      - [ ] Sub Stats Folder
+        - [ ] StatsAPI
+      - [ ] Sub Exp Folder
+        - [ ] ExpAPI
+      - [ ] Sub Level Folder
+        - [ ] LevelAPI
+  - [ ] EventListener
+  - [ ] Event Folder
+    - [ ] Sub PlayerEvent Folder
+      - [ ] PlayerEvent
+    - [ ]  Sub CurrencyEvent Folder
+      - [ ] Transaction Event
+    - [ ] Sub ErrorEvent Folder
+      - [ ] Error Event
+
+### Season 3
+- [ ] Wikis
