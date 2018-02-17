@@ -8,12 +8,12 @@ BTACore Is A Core Or An API For BackToAction's Sub Plugin.
 ````
 
 ## Index
-- [BTACore Description]()
-- [Authors]()
-- [Features]()
-- [Support]()
-- [More Info]()
-- [Authors Note]()
+- [BTACore Description](https://github.com/BackToAction/BTACore#description)
+- [Authors](https://github.com/BackToAction/BTACore#authors)
+- [Features](https://github.com/BackToAction/BTACore#features)
+- [Support](https://github.com/BackToAction/BTACore#support)
+- [More Info](https://github.com/BackToAction/BTACore#more-info)
+- [Authors Note](https://github.com/BackToAction/BTACore#authors-note)
 
 ## Description
 A Core Plugin With Many APIs That Can Be Used For Your Plugin!
