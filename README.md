@@ -39,11 +39,11 @@ This Repository Is A Plugin For;
 - [Pocketmine-MP](https://github.com/pmmp/Pocketmine-MP) [**API VERSION : NONE YET**]
 
 ## More Info
-- Read [CODE OF CONDUCT]() Before Trying To Contribute In The Code.
-- Read [Contributions]() Before Trying To Contribute In The The Repository.
-- Read [TODO List]() , To See Our TODO.
-- Read Our [Changelog]() , To Keep Track Of Our Activities.
-- This Repository Is Under [MIT LICENSE]().
+- Read [CODE OF CONDUCT](https://github.com/BackToAction/BTACore/blob/master/CODE_OF_CONDUCT.md) Before Trying To Contribute In The Code.
+- Read [Contributing](https://github.com/BackToAction/BTACore/blob/master/CONTRIBUTING.md) Before Trying To Contribute In The The Repository.
+- Read [TODO List](https://github.com/BackToAction/BTACore/blob/master/TODO) , To See Our TODO.
+- Read Our [Changelog](https://github.com/BackToAction/BTACore/blob/master/ChangeLog.md) , To Keep Track Of Our Activities.
+- This Repository Is Under [MIT LICENSE](https://github.com/BackToAction/BTACore/blob/master/LICENSE).
 - Read Our [Wikis]() , To Learn More. (Un-Available Right Now).
 - See Our [Github-Pages]() For This Repository. (Un-Available Right Now).
 
