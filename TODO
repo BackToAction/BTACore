@@ -27,21 +27,21 @@ This Plugin Contain A Simplified API.
       - [x] DatabaseAPI
     - [x] Currency Folder
       - [x] CurrencyAPI
-      - [ ] Sub Shop Folder
-        - [ ] ShopAPI
+      - [ ] Sub Shop Folder (removed as it can be made via other plugin)
+        - [ ] ShopAPI (removed as it can be made via other plugin)
     -[ ] RPG Folder
-      - [ ] Sub Stats Folder
-        - [ ] StatsAPI
+      - [ ] Sub Stats Folder (removed as it can be made via other plugin)
+        - [ ] StatsAPI (removed as it can be made via other plugin)
       - [ ] Sub Exp Folder
         - [ ] ExpAPI
       - [ ] Sub Level Folder
         - [ ] LevelAPI
   - [ ] EventListener
   - [ ] Event Folder
-    - [ ] Sub PlayerEvent Folder
-      - [ ] PlayerEvent
-    - [ ]  Sub CurrencyEvent Folder
-      - [ ] Transaction Event
+    - [ ] Sub PlayerEvent Folder (removed as it can be made via other plugin)
+      - [ ] PlayerEvent (removed as it can be made via other plugin)
+    - [ ]  Sub CurrencyEvent Folder (removed as it can be made via other plugin)
+      - [ ] Transaction Event (removed as it can be made via other plugin)
     - [ ] Sub ErrorEvent Folder
       - [ ] Error Event
 

@@ -1,0 +1,6 @@
+name: BTACore
+main: backtoaction\Main
+api: []
+description: A Core Plugin With Many APIs That Can Be Used For Your Plugin!
+authors: [BackToAction's Team]
+website: [https://backtoaction.github.io/BTACore]
