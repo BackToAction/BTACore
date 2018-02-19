@@ -44,8 +44,8 @@ This Repository Is A Plugin For;
 - Read [TODO List](https://github.com/BackToAction/BTACore/blob/master/TODO) , To See Our TODO.
 - Read Our [Changelog](https://github.com/BackToAction/BTACore/blob/master/ChangeLog.md) , To Keep Track Of Our Activities.
 - This Repository Is Under [MIT LICENSE](https://github.com/BackToAction/BTACore/blob/master/LICENSE).
-- Read Our [Wikis]() , To Learn More. (Un-Available Right Now).
-- See Our [Github-Pages]() For This Repository. (Un-Available Right Now).
+- Read Our [Wikis]() , To Learn More. __(Un-Available Right Now).__
+- See Our [Github-Pages]() For This Repository. __(Un-Available Right Now).__
 
 ## Authors Note
-This Plugin Is Dedicated For Pocketmine-MP, However If There Are Others That Do Not Used Pocketmine-MP but had an error by using this plugin, we would'nt fix it, thus you need to request at your non-Pocketmine-MP's repos to at least support this plugin or had the same features as current Pocketmine-MP.
+This Plugin Is Dedicated For **Pocketmine-MP**, However If There Are **Others** That Do Not Used **Pocketmine-MP** but *had* **an error** by using this **plugin**, we *would'nt fix it*, thus you need to request at your **non-Pocketmine-MP's** repos to at least *support this plugin* or had the same features as current **Pocketmine-MP**.
