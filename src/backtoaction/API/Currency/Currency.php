@@ -13,14 +13,14 @@ class CurrencyAPI implements DatabaseAPI {
     const CURRENCY_API_VERSION = 0.01;
     const ATTEMPT_FAIL = -1;
 
-    static public $instance;
+    public static $instance;
 
     public function __construct(Main $plugin) {
         $this->plugin = $plugin;
         $this->db = new DatabaseAPI::getInstance();
     }
 
-    static public function getInstance() {
+    public static function getInstance() {
         if(is_null(self::$instance)) {
             self::$instance = new self();
         }

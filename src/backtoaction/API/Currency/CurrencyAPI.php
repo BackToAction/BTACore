@@ -8,13 +8,13 @@ namespace backtoaction\API\Currency;
 use backtoaction\Main;
 use backtoaction\API\Database\DatabaseAPI;
 
-class CurrencyAPI {
+interface CurrencyAPI {
 
-    static public $instance;
+    public static $instance;
 
     public function __construct(Main $plugin);
 
-    static public function getInstance();
+    public static function getInstance();
 
     private function getDB(string $user);
 
