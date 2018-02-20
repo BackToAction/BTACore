@@ -8,8 +8,19 @@ Keep Track For Our Changes
 - [Changelog v0.0.3](https://github.com/BackToAction/BTACore/blob/master/ChangeLog.md#changelog-v003)
 - [Changelog v0.0.3.5](https://github.com/BackToAction/BTACore/blob/master/ChangeLog.md#changelog-v0035)
 - [Changelog v0.0.4](https://github.com/BackToAction/BTACore/blob/master/ChangeLog.md#changelog-v004)
+- [Changelog v0.0.4.5](https://github.com/BackToAction/BTACore/blob/master/ChangeLog.md#changelog-v0045)
 
 
+## Changelog v.0.4.5
+- change some minor code style.
+- some progress in ExpAPI.
+- add removePlayerData in DatabaseAPI
+- add private token (suggest by @Cynoser and still in disscussing about this.)
+- add permsgroup for the purpose of perms.
+- PermissionAPI is in progress
+- ExpAPI is still in development phrase.
+- now to access valuble function, must need private token. (priority) // ex: addPermsToUser.
+- solve some unknown.
 
 ### Changelog v0.0.4
 - remove some todo list features.
@@ -18,10 +29,10 @@ Keep Track For Our Changes
 - stats in the database would'nt be removed as is would be easy to make a stats plug.
 - update databaseAPI to be more read-able for other APIs to use.
 - the DatabaseAPI would be act as a core for others APIs, as it easier to handle.
-- API's related to RPG is still in progress.
+- RPG's APIs is in progress
 
 ### Changelog v0.0.3.5
-- Open Source.
+- open source.
 
 ### Changelog v0.0.3
 - rebase interface.

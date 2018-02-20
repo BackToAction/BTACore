@@ -8,13 +8,13 @@ namespace backtoaction\API\Database;
 use backtoaction\Main;
 use pocketmine\utils\Config;
 
-class DatabaseAPI  {
+interface DatabaseAPI  {
 
-    static private $instance;
+    private static $instance;
 
     public function _construct(Main $plugin);
 
-    static private function getInstance();
+    private static function getInstance();
 
     private function makeId(string $user);
 
