@@ -51,7 +51,7 @@ class Permission implements PermissionAPI {
         if(strtolower($perm) == $check) { // the perms is exist lol
             $token_check = $this->db->getToken()->get("private_token");
             if($token === $token_check) {
-                unset($check[array_search(strtolower($perm), $check, $strict = true); // thank for the guide @CortexPE
+                unset($check[array_search(strtolower($perm), $check, $strict = false); // thank for the guide @CortexPE
             }else{
                 $this->plugin->getLogger()->notice("Attempt To Use Unknown Token. Request Rejected.");
             }
