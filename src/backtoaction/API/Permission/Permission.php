@@ -29,7 +29,7 @@ class Permission implements PermissionAPI {
         }
     }
 
-    public function addPermsToPlayer(string $user, string $perm, string $token) {
+    public function addPermsToPlayer(string $user, string $perm, string $token) { // todo, find a better way to add array.
         $check = $this->getPlayerPerms($user);
         if(strtolower($perm) !== $check) { //check if there is already a perms exists
             $token_check = $this->db->getToken()->get("private_token");
@@ -58,6 +58,14 @@ class Permission implements PermissionAPI {
         }else{
             $this->plugin->getLogger()->notice("Attempt To Remove Non-Exists Perms. Request Rejected.");
         }
+    }
+
+    public function createGroup(string $group, string $token) {
+        
+    }
+
+    public function addPermsToGroups(string $group, string $perms, string $token) {
+        // :thonk:
     }
     
 }

@@ -10,20 +10,27 @@ use pocketmine\utils\Config;
 
 interface DatabaseAPI  {
 
-    private static $instance;
+    protected static $instance;
 
     public function _construct(Main $plugin);
 
-    private static function getInstance();
+    protected static function getInstance();
 
-    private function makeId(string $user);
+    protected function makeId(string $user);
 
-    private function getPlayerDatabase(string $user);
+    protected function getToken();
+
+    protected function getPlayerDatabase(string $user);
 
     private function databaseArray();
 
     public function DATABASE_API_Checker();
 
+    protected function removePlayerData(string $user, string $token);
+
+    protected function checkAgn(string $src);
+
+    protected function getSetting();
 
 
 }
