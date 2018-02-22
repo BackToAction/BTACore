@@ -18,12 +18,19 @@ interface DatabaseAPI  {
 
     protected function makeId(string $user);
 
+    protected function getToken();
+
     protected function getPlayerDatabase(string $user);
 
     private function databaseArray();
 
     public function DATABASE_API_Checker();
 
+    protected function removePlayerData(string $user, string $token);
+
+    protected function checkAgn(string $src);
+
+    protected function getSetting();
 
 
 }

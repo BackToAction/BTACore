@@ -170,6 +170,8 @@ class Database implements DatabaseAPI  {
      * }
      */
 
+    protected function getGroupDB() {}
+
 
 
 }
