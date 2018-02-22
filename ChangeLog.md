@@ -13,6 +13,10 @@ Keep Track For Our Changes
 
 ### Changelog v.0.0.5
 - change some sht missused access modifier
+- some update with database
+- some update with permission
+- some minor update with exp
+- still update lol
 
 ## Changelog v.0.0.4.5
 - change some minor code style.
