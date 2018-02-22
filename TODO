@@ -29,6 +29,8 @@ This Plugin Contain A Simplified API.
       - [x] CurrencyAPI
       - [ ] Sub Shop Folder (removed as it can be made via other plugin)
         - [ ] ShopAPI (removed as it can be made via other plugin)
+    - [x] Permission Folder
+      - [ ] PermissionAPI
     -[ ] RPG Folder
       - [ ] Sub Stats Folder (removed as it can be made via other plugin)
         - [ ] StatsAPI (removed as it can be made via other plugin)
@@ -47,3 +49,9 @@ This Plugin Contain A Simplified API.
 
 ### Season 3
 - [ ] Wikis
+- [ ] src
+  - [ ] API Folder
+    - [ ] Currency Folder
+      - [ ] Bank Folder
+        - [ ] BankAPI
+    - [ ] 

@@ -11,7 +11,10 @@ Keep Track For Our Changes
 - [Changelog v0.0.4.5](https://github.com/BackToAction/BTACore/blob/master/ChangeLog.md#changelog-v0045)
 
 
-## Changelog v.0.4.5
+### Changelog v.0.0.5
+- change some sht missused access modifier
+
+## Changelog v.0.0.4.5
 - change some minor code style.
 - some progress in ExpAPI.
 - add removePlayerData in DatabaseAPI
