@@ -10,15 +10,15 @@ use pocketmine\utils\Config;
 
 interface DatabaseAPI  {
 
-    private static $instance;
+    protected static $instance;
 
     public function _construct(Main $plugin);
 
-    private static function getInstance();
+    protected static function getInstance();
 
-    private function makeId(string $user);
+    protected function makeId(string $user);
 
-    private function getPlayerDatabase(string $user);
+    protected function getPlayerDatabase(string $user);
 
     private function databaseArray();
 

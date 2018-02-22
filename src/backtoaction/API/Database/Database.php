@@ -16,20 +16,20 @@ class Database implements DatabaseAPI  {
 
     private $error = -1;
 
-    private static $instance;
+    protected static $instance;
 
     public function __construct(Main $plugin) {
         $this->plugin = $plugin;
     }
 
-    private static function getInstance() {
+    protected static function getInstance() {
         if(is_null(self::$instance)) {
             self::$instance = new self();
         }
         return self::$instance;
     }
 
-    private function makeId(string $user) {
+    protected function makeId(string $user) {
         $name = strtolower(string $user);
         $token = "asdfghjklqwertyuiopHyGlobalHDzxcvbnmlkjhgfdsa";
         $name_1 = strtok(string $name, string $token);
@@ -49,7 +49,7 @@ class Database implements DatabaseAPI  {
         return $tokenDB;
     }
 
-    private function getPlayerDatabase(string $user) {
+    protected function getPlayerDatabase(string $user) {
         $id = $this->makeId(string $user);
         $result = new Config($this->plugin->getDataFolder() . "\\db\\" . $id . ".yml", CONFIG::YAML, $this->databaseArray());
         return $result;
@@ -69,8 +69,8 @@ class Database implements DatabaseAPI  {
                 "bta.perms.simpler",
             ],
             "permsgroup" => [
-                "newbie",
-                "newgroup",
+                "bta.newbie",
+                "bta.newgroup",
             ],
     ];
         return $result;
@@ -109,7 +109,7 @@ class Database implements DatabaseAPI  {
         return $result;
     }
 
-    private function removePlayerData(string $user, string $token) {
+    protected function removePlayerData(string $user, string $token) {
         // should i implement this? hmm :thonk:
         // use fkng unlink()
         $catch = $this->getToken();
@@ -127,7 +127,7 @@ class Database implements DatabaseAPI  {
         }
     }
 
-    private function checkAgn(string $src) {// why i add this? well its convience for meh :)
+    protected function checkAgn(string $src) {// why i add this? well its convience for meh :)
         if(!file_exist($src)) {
             $this->plugin->getLogger()->notice("[Checker] The File Is Not Exists Anymore.");
         }else{
@@ -135,11 +135,40 @@ class Database implements DatabaseAPI  {
         } 
     }
 
-    private function backupPlayerDataAll(string $token) { // this is a hacky way to do. do not use this code if you want to make a backup function
+    protected function backupPlayerDataAll(string $token) { // this is a hacky way to do. do not use this code if you want to make a backup function
         // function ? to backup the data btch
         $bcksrc = $this->plugin->getDataFolder() . "\\.backup\\";
         // later todo.
     }
+
+    protected function getSetting() { // setting :) .
+        $result = new Config($this->plugin->getDataFolder() . "setting.yml" , CONFIG::YAML, array[
+            "player_database" => [
+                "starter_stats" => [
+                    "str" => 5, "int" => 5, "dex" => 5, "luck" => 5,
+                ],
+                "exp" => [
+                    "starter_maxexp" => 10,
+                    "maxexp_multiplier" => 2,
+                    "add_maxexp_each_lvl_up" => 100,
+                    "exp_reduce_percentage" => 1,
+                ],
+            ]
+        ]);
+        return $result;
+    }
+    /** 
+     * What happen if  make a config that get the number and allow the variable?
+     * ex: variable: 6
+     * then get the variable, return get 6
+     * then user allowed to make 6 variable with the same sub variable!
+     * how to do it:
+     * $i = get->("variable"); // 6
+     * $var = 1
+     * for($var = $i; $var > $i; $var++){ 1 ... 6
+     * //codee
+     * }
+     */
 
 
 
