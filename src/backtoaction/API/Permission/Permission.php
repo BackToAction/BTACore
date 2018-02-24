@@ -36,7 +36,7 @@ class Permission implements PermissionAPI {
             if($token === $token_check) { // check is the token is valid. // cant misspell a fkng thng
                 $push = strtolower($perm);
                 $i = $this->getPlayerDB($user);
-                $i->set("perms", $push);
+                array_push($i["perms"], $push);
                 $i->save();
             }else{
                 $this->plugin->getLogger()->notice("Attempt To Use Unknown Token. Request Rejected.");
@@ -51,7 +51,7 @@ class Permission implements PermissionAPI {
         if(strtolower($perm) == $check) { // the perms is exist lol
             $token_check = $this->db->getToken()->get("private_token");
             if($token === $token_check) {
-                unset($check[array_search(strtolower($perm), $check, $strict = false); // thank for the guide @CortexPE
+                unset($check[array_search(strtolower($perm), $check, $strict = false)]); // thank for the guide @CortexPE
             }else{
                 $this->plugin->getLogger()->notice("Attempt To Use Unknown Token. Request Rejected.");
             }
@@ -60,8 +60,46 @@ class Permission implements PermissionAPI {
         }
     }
 
-    public function createGroup(string $group, string $token) {
-        
+    protected function getGroupDB() {
+        return $this->db->getGroupDB();
+    }
+
+    public function getGroup() {
+        $db = $this->getGroupDB();
+        $group = $db->get("group");
+        foreach($group as $groups) {
+            return strtolower($groups);
+        }
+    }
+
+    public function getGroupPerms(string $groups) {
+        $group = strtolower($groups);
+        $db = $this->getGroupDB();
+        $check = $this->getGroup();
+        if($group == $check) {
+            $perm = $db->get("group")->get("$group")->get("perms");
+            foreach($perm as $perms) {
+                return strtolower($perms);
+            }
+        }
+    }
+
+    public function createGroup(string $groups, string $token) {
+        $group = strtolower($groups);
+        $db = $this->getGroupDB();
+        $check = $this->db->getToken()->get("private_token");
+        if($group !== $this->getGroup()) {
+            if($token === $check) {
+                $eater = yaml_parse_file($db);
+                $eater += ["group" => [$group => ["perms" => []]]]; // trying SoFe :shrud:
+                yaml_emit($eater);
+                $db->save();
+            }else{
+                $this->plugin->getLogger()->notice("Attempt To Use Unknown Token. Request Rejected.");
+            }
+        }else{
+            $this->plugin->getLogger()->notice("Attempt To Create New Group That Already Exist. Request Rejected.");
+        }
     }
 
     public function addPermsToGroups(string $group, string $perms, string $token) {

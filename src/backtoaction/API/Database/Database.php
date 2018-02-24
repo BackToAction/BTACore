@@ -170,7 +170,22 @@ class Database implements DatabaseAPI  {
      * }
      */
 
-    protected function getGroupDB() {}
+    protected function getGroupDB() {
+        $result = new Config($this->getDataFolder() . "\\db\\" . "Group.yml", CONFIG::YAML, array[
+            "group" => [
+                "example" => [
+                    "perms" => [],
+                ],
+                "bta.newbie" => [
+                    "perms" => [],
+                ],
+                "bta.newgroup" => [
+                    "perms" => [],
+                ],
+            ]
+        ]);
+        return $result;
+    }
 
 
 

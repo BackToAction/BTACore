@@ -9,7 +9,15 @@ Keep Track For Our Changes
 - [Changelog v0.0.3.5](https://github.com/BackToAction/BTACore/blob/master/ChangeLog.md#changelog-v0035)
 - [Changelog v0.0.4](https://github.com/BackToAction/BTACore/blob/master/ChangeLog.md#changelog-v004)
 - [Changelog v0.0.4.5](https://github.com/BackToAction/BTACore/blob/master/ChangeLog.md#changelog-v0045)
+- [Changelog v.0.0.5](https://github.com/BackToAction/BTACore/blob/master/ChangeLog.md#changelog-v005)
+- [Changelog v.0.0.5.5](https://github.com/BackToAction/BTACore/blob/master/ChangeLog.md#changelog-v0055)
 
+### Changelog v.0.0.5.5
+- fix some error in permissions
+- some change with the code
+- remove some sht
+- add some minor thng
+- re-calculate some thng
 
 ### Changelog v.0.0.5
 - change some sht missused access modifier
