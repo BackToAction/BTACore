@@ -58,7 +58,7 @@ This Repository Is A Plugin For;
 - Read [Contributing](https://github.com/BackToAction/BTACore/blob/master/CONTRIBUTING.md) Before Trying To Contribute In The The Repository.
 - Read [TODO List](https://github.com/BackToAction/BTACore/blob/master/TODO) , To See Our TODO.
 - Read Our [Changelog](https://github.com/BackToAction/BTACore/blob/master/ChangeLog.md) , To Keep Track Of Our Activities.
-- This Repository Is Under [MIT LICENSE](https://github.com/BackToAction/BTACore/blob/master/LICENSE).
+- This Repository Is Under [GPL v3 LICENSE](https://github.com/BackToAction/BTACore/blob/master/LICENSE).
 - Read Our [Wikis]() , To Learn More. __(Un-Available Right Now).__
 - See Our [Github-Pages]() For This Repository. __(Un-Available Right Now).__
 
