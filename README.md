@@ -1,4 +1,4 @@
-[![HitCount](http://hits.dwyl.io/BackToAction/BTACore.svg)](http://hits.dwyl.io/BackToAction/BTACore)
+[![HitCount](http://hits.dwyl.io/BackToAction/BTACore.svg)](http://hits.dwyl.io/BackToAction/BTACore) [![Star](https://github.com/BackToAction/BTACore/stargazers)](https://github.com/BackToAction/BTACore/stargazers)
 
 # BTACore
 Still In-Closed Development.
