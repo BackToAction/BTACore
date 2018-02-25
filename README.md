@@ -1,6 +1,6 @@
 # [![](https://avatars0.githubusercontent.com/u/34904027?s=70&v=4)](https://github.com/BackToAction) BTACore
 
-[![HitCount](http://hits.dwyl.io/BackToAction/BTACore.svg)](http://hits.dwyl.io/BackToAction/BTACore) [![Open Source Love png1](https://badges.frapsoft.com/os/v1/open-source.png?v=103)](https://github.com/BackToAction/BTACore/) [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/BackToAction/BTACore/blob/master/LICENSE)
+[![HitCount](http://hits.dwyl.io/BackToAction/BTACore.svg)](http://hits.dwyl.io/BackToAction/BTACore) [![Open Source Love png1](https://badges.frapsoft.com/os/v1/open-source.png?v=103)](https://github.com/BackToAction/BTACore/) [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://github.com/BackToAction/BTACore/blob/master/LICENSE)
 
 Still In-Closed Development.
 ````
