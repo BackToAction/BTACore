@@ -11,6 +11,9 @@ use backtoaction\Main;
 
 class Permission implements PermissionAPI {
 
+    const GROUP_EXIST = 1001;
+    const GROUP_NOT_EXIST = 1005;
+
     public function __construct(Main $plugin) {
         $this->plugin = $plugin;
         $this->db = new DatabaseAPI::getInstance();
@@ -32,8 +35,8 @@ class Permission implements PermissionAPI {
     public function addPermsToPlayer(string $user, string $perm, string $token) { // todo, find a better way to add array.
         $check = $this->getPlayerPerms($user);
         if(strtolower($perm) !== $check) { //check if there is already a perms exists
-            $token_check = $this->db->getToken()->get("private_token");
-            if($token === $token_check) { // check is the token is valid. // cant misspell a fkng thng
+            $checker = $this->db->checkToken($token);
+            if($checker == DATABASEAPI::VALID) { // check is the token is valid. // cant misspell a fkng thng
                 $push = strtolower($perm);
                 $i = $this->getPlayerDB($user);
                 array_push($i["perms"], $push);
@@ -49,8 +52,8 @@ class Permission implements PermissionAPI {
     public function removePermsToPlayer(string $user, string $perm, string $token) {
         $check = $this->getPlayerPerms($user);
         if(strtolower($perm) == $check) { // the perms is exist lol
-            $token_check = $this->db->getToken()->get("private_token");
-            if($token === $token_check) {
+            $checker = $this->db->checkToken($token);
+            if($checker == DATABASEAPI::VALID) {
                 unset($check[array_search(strtolower($perm), $check, $strict = false)]); // thank for the guide @CortexPE
             }else{
                 $this->plugin->getLogger()->notice("Attempt To Use Unknown Token. Request Rejected.");
@@ -87,13 +90,23 @@ class Permission implements PermissionAPI {
     public function createGroup(string $groups, string $token) {
         $group = strtolower($groups);
         $db = $this->getGroupDB();
-        $check = $this->db->getToken()->get("private_token");
+        $checker = $this->db->checkToken($token);
         if($group !== $this->getGroup()) {
-            if($token === $check) {
+            if($checker == DATABASEAPI::VALID) {
                 $eater = yaml_parse_file($db);
-                $eater += ["group" => [$group => ["perms" => []]]]; // trying SoFe :shrud:
+                $eater += ["group" => ["$group" => ["perms" => []]]]; // trying SoFe :shrud:
                 yaml_emit($eater);
                 $db->save();
+                $lmoa = $this->checkerGroup($group); // my bad example of coding :')
+                if($lmoa == self::GROUP_EXIST) {
+                    $this->plugin->getLogger()->notice("Group: ". "$group" ." Is Exist.");
+                }elseif($lmoa == self::GROUP_NOT_EXIST) {
+                    $this->plugin->getLogger()->notice("Group: ". "$group" ." Is Not Exist Yet.");
+                }else{
+                    $catcher = -1;
+                    $this->plugin->getLogger()->warning("Unknown Error Found At Function createGroup()");
+                    return $catcher;
+                }
             }else{
                 $this->plugin->getLogger()->notice("Attempt To Use Unknown Token. Request Rejected.");
             }
@@ -102,8 +115,21 @@ class Permission implements PermissionAPI {
         }
     }
 
+    protected function checkerGroup(string $group) {
+        $groups = strtolower($this->getGroup());
+        if(strtolower($group) == $groups) {
+            return self::GROUP_EXIST;
+        }else{
+            return self::GROUP_NOT_EXIST;
+        }
+    }
+
     public function addPermsToGroups(string $group, string $perms, string $token) {
         // :thonk:
+        $token_checker = $this->db->checkToken($token);
+        if($token_checker == DATABASEAPI::VALID) {
+            $perm = strtolower($perms);
+        }
     }
     
 }

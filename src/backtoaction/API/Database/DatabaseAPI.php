@@ -10,6 +10,16 @@ use pocketmine\utils\Config;
 
 interface DatabaseAPI  {
 
+    const DATABASE_API_VERSION = 0.01;
+
+    const PLAYER_DATA = "player_data";
+
+    const VALID = 1002;
+
+    const INVALID = 1006;
+
+    private $error = -1;
+
     protected static $instance;
 
     public function _construct(Main $plugin);

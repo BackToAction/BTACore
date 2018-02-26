@@ -14,6 +14,10 @@ class Database implements DatabaseAPI  {
 
     const PLAYER_DATA = "player_data";
 
+    const VALID = 1002;
+
+    const INVALID = 1006;
+
     private $error = -1;
 
     protected static $instance;
@@ -47,6 +51,15 @@ class Database implements DatabaseAPI  {
         ];// evil way to make user cry LOLOLOLOL
         $tokenDB = new Config($this->plugin->getDataFolder() . "token.yml", CONFIG::YAML, $result);
         return $tokenDB;
+    }
+
+    protected function checkToken(string $tokens) { // now use this function :octocat: :change will occure!!:
+        $token = $this->getToken()->get("private_token");
+        if($tokens === $token) {
+            return self::VALID;
+        }else{
+            return self::INVALID;
+        }
     }
 
     protected function getPlayerDatabase(string $user) {
@@ -112,8 +125,8 @@ class Database implements DatabaseAPI  {
     protected function removePlayerData(string $user, string $token) {
         // should i implement this? hmm :thonk:
         // use fkng unlink()
-        $catch = $this->getToken();
-        if($token === $catch->get("private_token")) {
+        $checker = $this->checkToken($token);
+        if($checker == self::VALID) {
             $dub = $this->makeId($user);
             $src = $this->plugin->getDataFolder() . "\\db\\" . $dub . ".yml";
             if(file_exists($src)) {
